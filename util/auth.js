@@ -18,11 +18,11 @@ export async function authenticate(mode, email, password){
         password: password,
         returnSecureToken: true
     }
-    try{
+    // try{
         const res = await axios.post(url,body);
         const token = res.data.idToken;
         return token;
-    }catch(err){
-        return err;
-    }
+    // }catch(err){
+    //     return err;
+    // }
 }

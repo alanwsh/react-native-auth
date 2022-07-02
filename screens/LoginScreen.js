@@ -17,8 +17,8 @@ function LoginScreen() {
       authCtx.authenticate(token);
     }catch(err){
       Alert.alert('Authentication failed','Please check your credentials');
+      setLoading(false);
     }
-    setLoading(false);
   }
 
   if(isLoading){
